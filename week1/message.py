@@ -9,6 +9,10 @@ print(msg)
 msg = "I'm Excited to Learn More"
 print(msg)
 
+print("This is cool")
+
+print('This is so much easier than plain html and java')
+
 
 
 
