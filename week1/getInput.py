@@ -1,4 +1,4 @@
-#Get User Input
+# Step 2 Get User Input
 
 city=str(input("Enter Hometown City: "))
 zipcode = int(input("Enter Hometown Zipcode: "))

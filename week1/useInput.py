@@ -1,4 +1,4 @@
-# Manipulate String
+# Step 3 Manipulate String
 
 import datetime
 
