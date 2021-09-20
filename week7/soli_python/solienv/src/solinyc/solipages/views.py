@@ -8,10 +8,12 @@ def home_view(request, *args, **kwargs): #*args, **kwargs
      #return HttpResponse("<h1>Home Page</h1>") #string of HTML code
      return render(request, 'home.html');
 def blog_view(request, *args, **kwargs): #*args, **kwargs
-     print(args, kwargs)
-     print(request.user)
      #return HttpResponse("<h1>Home Page</h1>") #string of HTML code
      return render(request, 'blog.html');
+
+def course_view(request, *args, **kwargs): #*args, **kwargs
+     return render(request, 'course_list.html')
+
 
 def contact_view(request, *args, **kwargs): #*args, **kwargs
      #return HttpResponse("<h1>Contact Page</h1>") #string of HTML code
