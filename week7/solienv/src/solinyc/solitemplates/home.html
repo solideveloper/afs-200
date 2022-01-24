@@ -1,0 +1,27 @@
+{% extends 'base.html' %} # request.user will display username currently logged
+in to site. 
+{% load static %}
+
+
+
+{% block content %}
+{% block title %}
+  {% if user.is_authenticated %}
+    <h1>
+        Hello, {{ request.user }}
+    </h1>
+  {% else %}
+    <h1>
+      Hello, Please Login For Full Access..
+    </h1>
+  {% endif %}
+{% endblock %}
+
+<div class="header">
+  <img src="{% static 'img/white_logo_transparent_background.png' %}" class="headerimage" id="headerimage" " alt="headerimage" height="960px">
+{% endblock %}
+
+{% block another_content_area %} 
+<h3>This is another content area created only in my
+home.html template.. </h3>
+{%endblock %} 
