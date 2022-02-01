@@ -1,0 +1,10 @@
+{% extends 'base.html' %} 
+{% block content %} 
+{% for instance in object_list %}
+<p>
+  <a href="{{ instance.get_absolute_url }}" style="color: #333">
+    {{ instance.title }} - 
+    {{instance.description }}</a>
+</p>
+{% endfor %} 
+{% endblock %}

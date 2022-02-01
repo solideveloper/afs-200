@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<center>
+    <h1> Hello {{ name }} Here Are Your Events For {{ month }}  {{ year }} </h1>
+    As of {{ time }}
+    <br/> 
+
+    <h3>{{ cal|safe }}<h3/>
+    <br/><br/><br/><br/>
+   
+
+</center>
+    <h1> This is the Events Page </h1>
+     <br/>
+        {% for event in event_list %}
+            <div class="card-header"><strong>{{ event }}</strong>
+                <h5 class="card-title">Location: {{ event.venue }}</h5>
+                <p>
+                    Date: {{ event.event_date }}<br/>
+                    Venue Website: {{ event.venue.web }}<br/>
+                    Manager: {{ event.manager }}<br/>
+                    Description: {{ event.description }}<br/>
+                </p>   
+            </div> 
+        <br/>
+        {% endfor %}
+          
+{% endblock %}

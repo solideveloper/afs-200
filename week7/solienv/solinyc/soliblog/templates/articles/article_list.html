@@ -1,0 +1,10 @@
+{% extends 'base.html' %} 
+{% block content %}
+     <h1>This is the Blog Page</h1>
+     {% for instance in object_list %}
+
+     <a href="{{ instance.get_absolute_url }}"><h5>No. {{ instance.id }} - {{ instance.title }}</h5></h1></a>
+     {% endfor %} 
+     <h5><a href="create"><h5>Create Blog</h5></a>
+               
+{% endblock %}

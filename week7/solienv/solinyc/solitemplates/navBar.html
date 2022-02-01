@@ -1,0 +1,69 @@
+{% extends 'base.html'%}
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul>
+            {% block nav %}
+            <div class="nav">
+                <li class="nav-item">
+                        {% block nav-home %}
+                            <a href="{% url 'home' %}">home</a>
+                        {% endblock %}
+                </li>
+                {% if user.is_authenticated %}
+                        <li>
+                            {% block nav-about %}
+                                <a href="{% url 'about' %}">about</a>
+                            {% endblock %}
+                        </li>
+                        <li>
+                            {% block nav-courses %}
+                                <a href="{% url 'courses' %}">courses</a>
+                            {% endblock %}
+                        </li>
+                        <li>
+                            {% block nav-articles %}
+                                <a href="{% url 'articles' %}">blog</a>
+                            {% endblock %}
+                        </li>
+                        <li>
+                            {% block nav-events %}
+                                <a href="{% url 'events' %}">events</a>
+                            {% endblock %}
+                        </li>
+
+                        <li>
+                            {% block nav-contact %}
+                                <a href="{% url 'contact' %}">contact</a>
+                            {% endblock %}
+                        </li>
+                        <li>
+                            {% block nav-logout %}
+                                <a href="{% url 'logout' %}">logout</a>
+                            {% endblock %}
+                        </li>
+                {% else %}
+                        <li>
+                            {% block nav-login %}
+                                <a href="{% url 'login' %}">login</a>
+                            {% endblock %}
+                        </li>
+                        <li>
+                            {% block nav-register %}
+                                <a href="{% url 'register' %}">register</a>
+                            {% endblock %}
+                        </li>
+                {% endif %}
+            </div>
+            {% endblock %}
+            </ul>
+        </div>
+    </div>
+</nav>
+
+{% endblock %}

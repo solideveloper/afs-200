@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="page-content">
+    <div class="card-body">
+        <h2 class="card-title">{{ object.title }}</h2>
+        
+        
+    <p> {{ object.description }}</p>
+        
+    <p>  {{ object.summary}}</p>
+    <p class="card-text"><strong>${{ object.price }}</strong></p>
+    </div>
+</div>
+
+{% endblock %}
